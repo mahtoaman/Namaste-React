@@ -8,13 +8,13 @@ import Footer from "./src/components/Footer";
 import About from "./src/components/About";
 import ErrorPage from "./src/components/ErrorPage";
 
-
-// Define the AppLayout
-const AppLayout = () => {
+// Define the AppLayout component with Header and Footer, and render children in between
+const AppLayout = ({ children }) => {
   return (
     <>
       <Header />
-      <Body />
+      <main>{children}</main>{" "}
+      {/* The "children" will be dynamic content based on the route */}
       <Footer />
     </>
   );
@@ -26,13 +26,49 @@ const root = createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<AppLayout />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/cart" element={<AppLayout />} />
-      <Route path="/contact" element={<About />} />
+      {/* Route with the AppLayout that always includes Header and Footer */}
+      <Route
+        path="/"
+        element={
+          <AppLayout>
+            <Body />
+          </AppLayout>
+        }
+      />
+      <Route
+        path="/about"
+        element={
+          <AppLayout>
+            <About />
+          </AppLayout>
+        }
+      />
+      <Route
+        path="/cart"
+        element={
+          <AppLayout>
+            <Body />
+          </AppLayout>
+        }
+      />
+      <Route
+        path="/contact"
+        element={
+          <AppLayout>
+            <About />
+          </AppLayout>
+        }
+      />
 
       {/* Catch-all route for invalid paths */}
-      <Route path="*" element={<ErrorPage />} />
+      <Route
+        path="*"
+        element={
+          <AppLayout>
+            <ErrorPage />
+          </AppLayout>
+        }
+      />
     </Routes>
   </BrowserRouter>
 );
