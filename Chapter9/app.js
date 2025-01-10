@@ -28,6 +28,9 @@ root.render(
     <Routes>
       <Route path="/" element={<AppLayout />} />
       <Route path="/about" element={<About />} />
+      <Route path="/cart" element={<AppLayout />} />
+      <Route path="/contact" element={<About />} />
+
       {/* Catch-all route for invalid paths */}
       <Route path="*" element={<ErrorPage />} />
     </Routes>
