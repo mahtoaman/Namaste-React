@@ -1,0 +1,21 @@
+{
+  "name": "parcel",
+  "version": "1.0.0",
+  "description": "first react app",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "App.js"
+  },
+  "author": "mahtoaman",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "parcel": "^2.13.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
+}
