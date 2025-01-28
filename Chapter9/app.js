@@ -7,8 +7,8 @@ import Body from "./src/components/Body";
 import Footer from "./src/components/Footer";
 import About from "./src/components/About";
 import ErrorPage from "./src/components/ErrorPage";
+import RestaurantDetails from "./src/components/RestaurentDetails";
 
-// Define the AppLayout component with Header and Footer, and render children in between
 const AppLayout = ({ children }) => {
   return (
     <>
@@ -56,6 +56,15 @@ root.render(
         element={
           <AppLayout>
             <About />
+          </AppLayout>
+        }
+      />
+
+      <Route
+        path="/restaurant/:restId" // This is the dynamic route
+        element={
+          <AppLayout>
+            <RestaurantDetails />
           </AppLayout>
         }
       />

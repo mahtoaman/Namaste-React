@@ -2,6 +2,7 @@ import RestaurentCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { restaurentList } from "./constants";
 import { useState, useEffect } from "react";
+import { Link } from "react-router";
 
 // Body Component
 const Body = () => {
@@ -48,7 +49,9 @@ if(filteredRestaurants?.length===0) return <h1>No Restaurants found</h1>
 
 
   // Render component
-  return restaurants.length===0?(<Shimmer/>) :(
+  return restaurants.length === 0 ? (
+    <Shimmer />
+  ) : (
     <>
       {/* Search bar */}
       <div className="search-container">
@@ -72,7 +75,9 @@ if(filteredRestaurants?.length===0) return <h1>No Restaurants found</h1>
       {/* Restaurant list */}
       <div className="restaurent-list">
         {filteredRestaurants.map((restaurant) => (
-          <RestaurentCard key={restaurant.id} {...restaurant} />
+          <Link to={"/restaurant/" + restaurant.id}>
+            <RestaurentCard key={restaurant.id} {...restaurant} />
+          </Link>
         ))}
       </div>
     </>
