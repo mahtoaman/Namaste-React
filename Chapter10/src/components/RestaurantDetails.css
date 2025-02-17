@@ -1,0 +1,96 @@
+/* RestaurantDetails.css */
+
+.restarantDetails {
+  background-color: #f9f9f9;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.restarantDetails__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.restarantDetails__header img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.restarantDetails__header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.restarantDetails__header h2 {
+  font-size: 1.2rem;
+  color: #777;
+  margin: 5px 0;
+}
+
+.restarantDetails__header h2 strong {
+  color: #333;
+}
+
+.menu {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 20px; /* Add left margin to shift the menu section to the left */
+  max-width: 600px; /* Limiting width for better presentation */
+}
+
+.menu h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  padding: 8px;
+  background-color: #f1f1f1;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.menu li:hover {
+  background-color: #ff8c00;
+  color: #fff;
+  cursor: pointer;
+}
+
+.menu p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.loading {
+  font-size: 1.5rem;
+  color: #ff8c00;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.error {
+  font-size: 1.5rem;
+  color: red;
+  text-align: center;
+  margin-top: 50px;
+}

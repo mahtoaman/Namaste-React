@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
+import "./Header.css"; // Import the CSS file
 
 const Title = () => {
   return (
@@ -27,15 +28,12 @@ const Header = () => {
           <li>
             <Link to={"/"}>Home </Link>
           </li>
-
           <li>
             <Link to={"/about"}> About</Link>
           </li>
-
           <li>
             <Link to={"/contact"}>Contact </Link>
           </li>
-
           <li>
             <Link to={"/cart"}>Cart </Link>
           </li>

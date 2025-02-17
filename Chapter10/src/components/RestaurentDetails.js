@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { IMG_CDN_URL } from "./constants";
+import "./RestaurantDetails.css"; // Import the CSS file
 
 const RestaurantDetails = () => {
   const { restId } = useParams();
@@ -33,11 +34,11 @@ const RestaurantDetails = () => {
   }
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="loading">Loading...</div>;
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <div className="error">Error: {error}</div>;
   }
 
   // Safely access menu items
